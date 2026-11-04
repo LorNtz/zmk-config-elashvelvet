@@ -15,6 +15,7 @@
 include:
   - board: eyelash_nano
     shield: prospector_adapter velvet_central_dongle
+    snippet: studio-rpc-usb-uart
     artifact-name: velvet_central_dongle
   - board: eyelash_nano
     shield: velvet_peripheral_left

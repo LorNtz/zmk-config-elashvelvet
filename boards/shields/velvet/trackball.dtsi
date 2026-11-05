@@ -3,6 +3,33 @@
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
 
+// Defaults captured from DYA Studio. Its rounded display shows 0.20x and 0.02x.
+&mouse_runtime_input_processor {
+    scale-multiplier = <39>;
+    scale-divisor = <200>;
+    rotation-degrees = <0>;
+    active-layers = <0x1>; // BASE (layer 0) remains active beneath other layers.
+    temp-layer-enabled;
+    temp-layer = <3>; // MOUSE
+    temp-layer-activation-delay-ms = <100>;
+    temp-layer-deactivation-delay-ms = <700>;
+    axis-snap-mode = <2>; // Y axis, matching the current Studio configuration.
+    axis-snap-threshold = <100>;
+    axis-snap-timeout-ms = <1000>;
+};
+
+&scroll_runtime_input_processor {
+    scale-multiplier = <1>;
+    scale-divisor = <60>;
+    rotation-degrees = <0>;
+    active-layers = <0x2>; // SYMBOL (layer 1)
+    axis-snap-mode = <2>;
+    axis-snap-threshold = <100>;
+    axis-snap-timeout-ms = <1000>;
+    xy-to-scroll-enabled;
+    // Temporary layer, axis inversion, and XY swap remain disabled.
+};
+
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
@@ -51,7 +78,9 @@
         input-processors = <&mouse_runtime_input_processor>;
 
         scroller {
-            layers = <5>;
+            // Replace the mouse processor while SYMBOL is active, including
+            // when the temporary MOUSE layer is still active. No process-next.
+            layers = <1>; // SYMBOL
             input-processors =
                 <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
                 <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;

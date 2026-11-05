@@ -1,5 +1,22 @@
 # zmk-config-velvet
 
+## Velvet36 (`36-trackball`)
+
+The compiled keymap mirrors the DYA Studio layout captured on 2026-11-05:
+BASE, SYMBOL, NUMBER, MOUSE, and four transparent spare layers. The three
+home-row mod-taps use **More Sensitive Optimized Mod-Tap** from the Corne config
+(balanced, 200 ms tapping term, 175 ms quick tap, 150 ms prior idle).
+
+The trackball uses the exact Studio sensitivities: mouse **39/200** (0.195x)
+and scroll **1/60** (about 0.0167x). Mouse movement activates MOUSE (layer 3),
+with a 100 ms guard after typing and a 700 ms inactivity timeout. Holding
+SYMBOL (layer 1) selects scrolling instead. Both profiles retain Studio's
+vertical axis snapping (threshold 100, window 1000 ms).
+
+See [flashing and adopting the compiled defaults](docs/flashing.md). Saved
+Studio overrides survive flashing, so use the documented selective resets
+when adopting this layout for the first time.
+
 ## 改键客户端
 https://github.com/cormoran/dya-studio/releases
 

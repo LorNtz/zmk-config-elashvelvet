@@ -38,6 +38,19 @@
     };
 
     behaviors {
+        opt_mt: opt_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Optimized Mod-Tap";
+            display-name = "Optimized Mod-Tap";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+        };
+
         opt_mt_2: opt_mt_2 {
             compatible = "zmk,behavior-hold-tap";
             label = "More Sensitive Optimized Mod-Tap";

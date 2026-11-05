@@ -6,6 +6,8 @@ The compiled keymap mirrors the DYA Studio layout captured on 2026-11-05:
 BASE, SYMBOL, NUMBER, MOUSE, and four transparent spare layers. The three
 home-row mod-taps use **More Sensitive Optimized Mod-Tap** from the Corne config
 (balanced, 200 ms tapping term, 175 ms quick tap, 150 ms prior idle).
+The original **Optimized Mod-Tap** (`opt_mt`) is also available in Studio,
+with its 280 ms tapping term and the same remaining behavior settings.
 
 The trackball uses the exact Studio sensitivities: mouse **39/200** (0.195x)
 and scroll **1/60** (about 0.0167x). Mouse movement activates MOUSE (layer 3),

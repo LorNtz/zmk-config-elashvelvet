@@ -9,6 +9,8 @@ BASE, SYMBOL, NUMBER, MOUSE, and four transparent spare layers. A/D/F use
 the Corne's balanced flavor, 175 ms quick tap, and 150 ms prior idle.
 The layout includes Ctrl+B at BASE position 12, Home/End on SYMBOL, and the
 updated MOUSE button positions. The MOUSE encoder inherits BASE's volume controls.
+The left encoder's hardware direction is corrected so clockwise raises volume
+and counterclockwise lowers it, including with saved Studio volume bindings.
 
 Mouse movement retains Studio's **39/200** (0.195x) sensitivity and activates
 MOUSE (layer 3), with a 100 ms guard after typing and a 700 ms inactivity timeout.

@@ -54,6 +54,11 @@ transparent, the encoder inherits BASE's volume controls and 5 ms tap time.
 The old MOUSE tap-time display can be ignored when both directions are
 transparent. This does not clear Bluetooth pairings.
 
+This update also reverses the left encoder's hardware direction. Flash the new
+**left** UF2 to apply that correction: clockwise should raise volume and
+counterclockwise lower it. The direction fix itself needs no settings reset;
+keep DYA's clockwise binding as Volume Up and counter-clockwise as Volume Down.
+
 High-resolution scrolling changes the USB/Bluetooth HID report descriptor.
 After flashing, reconnect USB or power-cycle and reconnect Bluetooth. The
 normal firmware and selective resets retain Bluetooth bonds. If a Bluetooth

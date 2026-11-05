@@ -1,57 +1,107 @@
 layout: {zmk_keyboard: velvet}
 layers:
   BASE:
-  - Esc
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
   - R
   - T
-  - '&mkp RCLK'
+  - $$mdi:skip-forward$$
   - Y
   - U
   - I
   - O
   - P
-  - {t: '$$mdi:backspace-outline$$', type: backspace}
-  - $$mdi:keyboard-tab$$
-  - A
-  - S
+  - $$mdi:backspace-reverse$$
+  - $$mdi:apple-keyboard-caps$$
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - D
   - F
   - G
-  - '&mkp MCLK'
+  - $$mdi:play-pause$$
   - H
   - J
   - K
-  - L
+  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
   - V
   - B
-  - '&mkp LCLK'
+  - $$mdi:skip-backward$$
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-caps$$
-  - '3'
-  - '1'
+  - $$mdi:apple-keyboard-option$$
+  - LGUI
+  - SYMBOL
   - $$mdi:keyboard-space$$
-  - $$mdi:keyboard-space$$
-  - '2'
-  - {t: \, s: '|'}
+  - Esc
+  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - NUMBER
+  - $$mdi:arrow-up$$
+  - $$mdi:arrow-down$$
+  SYMBOL:
+  - {t: '`', s: '~'}
+  - {t: Sft+1, s: Sft+!}
+  - {t: Sft+2, s: Sft+@}
+  - {t: Sft+3, s: Sft+#}
+  - {t: Sft+4, s: Sft+$}
+  - {t: Sft+5, s: Sft+%}
+  - {t: ▽, type: trans}
+  - {t: Sft+6, s: Sft+^}
+  - {t: Sft+7, s: Sft+&}
+  - {t: Sft+8, s: Sft+*}
+  - {t: Sft+9, s: Sft+(}
+  - {t: Sft+0, s: Sft+)}
+  - $$mdi:backspace-reverse$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:skip-backward$$
+  - $$mdi:play-pause$$
+  - $$mdi:skip-forward$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: '-', s: _}
   - {t: '=', s: +}
-  '1':
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: \, s: '|'}
   - {t: '`', s: '~'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Sft+-, s: Sft+_}
+  - {t: Sft+=, s: Sft++}
+  - {t: 'Sft+[', s: 'Sft+{'}
+  - {t: 'Sft+]', s: 'Sft+}'}
+  - {t: Sft+\, s: Sft+|}
+  - {t: Sft+`, s: Sft+~}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NUMBER:
+  - {t: ▽, type: trans}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -63,97 +113,47 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - $$mdi:backspace-reverse$$
-  - {t: ▽, type: trans}
-  - $$mdi:play-pause$$
-  - $$mdi:volume-minus$$
-  - $$mdi:volume-plus$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - '{'
-  - '}'
-  - {t: ▽, type: trans}
-  - F12
-  - {t: ▽, type: trans}
-  - AL MY COMPUTER
-  - AL CALCULATOR
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PgUp
-  - PgDn
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-up$$
+  - $$mdi:arrow-right$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2', type: held}
   - Home
   - End
-  - INSERT
+  MOUSE:
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  '2':
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - {t: ▽, type: trans}
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RGB OFF
-  - RGB OFF
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:bluetooth-connect$$', h: '1', type: held}
-  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '4'}
-  '3':
   - F1
   - F2
-  - $$mdi:arrow-up$$
   - F3
   - F4
   - F5
@@ -165,14 +165,14 @@ layers:
   - F10
   - F11
   - {t: ▽, type: trans}
-  - $$mdi:arrow-left$$
-  - $$mdi:arrow-down$$
-  - $$mdi:arrow-right$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp RCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -185,6 +185,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -192,7 +193,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -200,7 +200,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '4':
+  Layer 4:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -250,7 +250,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '5':
+  Layer 5:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -300,7 +300,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '6':
+  Layer 6:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -350,7 +350,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '7':
+  Layer 7:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

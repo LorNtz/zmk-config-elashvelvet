@@ -3,7 +3,7 @@
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
 
-// Defaults captured from DYA Studio. Its rounded display shows 0.20x and 0.02x.
+// Mouse defaults captured from DYA Studio; its rounded display shows 0.20x.
 &mouse_runtime_input_processor {
     scale-multiplier = <39>;
     scale-divisor = <200>;
@@ -19,15 +19,29 @@
 };
 
 &scroll_runtime_input_processor {
-    scale-multiplier = <1>;
-    scale-divisor = <60>;
+    // Sixteen high-resolution units per old wheel step: 16/60 = 4/15.
+    // The HID compatibility helper adapts this to each host's resolution.
+    scale-multiplier = <4>;
+    scale-divisor = <15>;
     rotation-degrees = <0>;
     active-layers = <0x2>; // SYMBOL (layer 1)
     axis-snap-mode = <2>;
     axis-snap-threshold = <100>;
     axis-snap-timeout-ms = <1000>;
     xy-to-scroll-enabled;
-    // Temporary layer, axis inversion, and XY swap remain disabled.
+    // Apply direction here so direct HID momentum follows physical scrolling.
+    y-invert;
+
+    // Gentle, short momentum after a deliberate flick; no fast-stage boost.
+    inertia-enabled;
+    inertia-window-ms = <200>;
+    inertia-interval-ms = <20>;
+    inertia-threshold = <96>; // Six old wheel steps in the measurement window.
+    inertia-decay-percent = <15>;
+    inertia-normal-max-output = <16>; // At most one old wheel step per tick.
+    inertia-fast-threshold = <0>;
+    inertia-fast-output-percent = <100>;
+    // Temporary layer and XY swap remain disabled. Momentum stops off SYMBOL.
 };
 
 &pinctrl {
@@ -81,9 +95,7 @@
             // Replace the mouse processor while SYMBOL is active, including
             // when the temporary MOUSE layer is still active. No process-next.
             layers = <1>; // SYMBOL
-            input-processors =
-                <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
-                <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
         };
     };
 };

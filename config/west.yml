@@ -17,7 +17,7 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: main+dya
+      revision: e5c9b6915b56801193e359dd9bad4a167ce0d1b8 # main+dya; scroll compatibility patch baseline
       import: app/west.yml
       clone-depth: 1
     - name: zephyr
@@ -56,6 +56,7 @@ manifest:
     - name: zmk-module-settings-rpc
       import: true
     - name: zmk-module-runtime-input-processor
+      revision: decf628d7ce5ed95b520c650824c28ea9de649c1
       import: true
     - name: zmk-feature-custom-settings
       import: true
